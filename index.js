@@ -351,7 +351,7 @@ function toggleModal(modalId) {
 }
 async function loadStats() {
     try {
-        const response = await fetch(`/stats/${userData.id}`);
+        const response = await fetch(`https://backend-pq5u.onrender.com/stats/${userData.id}`);
         if (!response.ok) throw new Error('Failed to fetch stats');
 
         const data = await response.json();
