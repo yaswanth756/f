@@ -55,7 +55,7 @@ async function loadTopics() {
             return;
         }
 
-        const response = await fetch(`/topics/${userData.id}`, {
+        const response = await fetch(`https://backend-pq5u.onrender.com/topics/${userData.id}`, {
             headers: { 'Content-Type': 'application/json' }
         });
 
@@ -191,7 +191,7 @@ document.getElementById('addTopicForm').onsubmit = async (e) => {
     try {
         // Send data to the backend via a POST request
         console.log(userData.id);
-        const response = await fetch(`newtopic/${userData.id}`, {
+        const response = await fetch(`https://backend-pq5u.onrender.com/newtopic/${userData.id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -302,7 +302,7 @@ function updateTopic(topicId) {
         modal.style.display = 'none';
         
         // Make the API call
-        fetch(`/progress/update/${topicId}`, {
+        fetch(`https://backend-pq5u.onrender.com/progress/update/${topicId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ easy, medium, hard, userid}),
@@ -615,7 +615,7 @@ class WorkDayTracker {
 
     async initialize() {
         try {
-            const response = await fetch(`/days-worked/${this.userData.id}`);
+            const response = await fetch(`https://backend-pq5u.onrender.com/days-worked/${this.userData.id}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch work data from the server.');
             }
@@ -685,7 +685,7 @@ class WorkDayTracker {
             // Trigger fire animation
             this.createFireAnimation();
 
-            const response = await fetch(`/days-worked/${this.userData.id}`, {
+            const response = await fetch(`https://backend-pq5u.onrender.com/days-worked/${this.userData.id}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -899,7 +899,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Send login request
-        fetch('/login', {
+        fetch('https://backend-pq5u.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -945,7 +945,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Send signup request
-        fetch('/signup', {
+        fetch('https://backend-pq5u.onrender.com/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
