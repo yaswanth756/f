@@ -785,7 +785,7 @@ class AuthManager {
         this.saveUserData(data.user);
         
         setTimeout(() => {
-            window.location.href = '/';
+            window.location.href = 'https://yaswanth756.github.io/f/';
         }, REDIRECT_DELAY);
     }
 
