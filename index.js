@@ -913,7 +913,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Store user data or redirect
                 localStorage.setItem('userData', JSON.stringify(data.user));
                 setTimeout(() => {
-                    window.location.href = 'https://backend-pq5u.onrender.com/'; // Redirect to dashboard
+                    window.location.href = 'https://yaswanth756.github.io/f/'; // Redirect to dashboard
                 }, 1000);
             } else {
                 correctDiv.innerHTML = '<span style="color: red;">Invalid credentials</span>';
